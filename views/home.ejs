@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/homPage.css" />
+    <script src="https://kit.fontawesome.com/186c98bb11.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>TO DO APP</h1>
+      <div class="to-do-container">
+        <form action="/list/add" method="post">
+          <div class="input-btn-wrapper">
+            <input type="text" placeholder="Add Task..." name="name" required>
+            <button class="btn" type="submit">Add</button>
+          </div>
+        </form>
+
+        <div class="list-container">
+          <ul>
+            <% for(let i=0 ; i<list.length ; i++){%>
+            <li>
+              <div class="checkbox-label-wrapper">
+                <input type="checkbox" id="check_<%=list[i]._id%>"/>
+                <label class="lbl" for="check_<%=list[i]._id%>" ><%=list[i].taskName%></label>
+              </div>
+              <div class="dlt-btn">
+                <a href="list/delete?id=<%=list[i]._id%>">
+                    <i class="fa-solid fa-trash-can"></i>
+                </a>
+              </div>
+            </li>
+            <%}%>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

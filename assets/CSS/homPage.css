@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+  --bg-color: #2a0944;
+  --to-list-bg-color: #eeeeee;
+  --btn-color: #2c3333;
+  --input-border-color: gray;
+  --red: red;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--bg-color);
+}
+
+.container {
+  width: 40rem;
+  margin: 4rem auto;
+}
+
+.container h1 {
+  color: white;
+  text-align: center;
+}
+
+.to-do-container {
+  margin-top: 1rem;
+  border-radius: 1.2rem;
+  min-height: 50rem;
+  padding: 2rem 2.5rem;
+  border: 1px solid black;
+  background-color: var(--to-list-bg-color);
+  background-color: #e5e5f7;
+  opacity: 1;
+  background-image: radial-gradient(#444cf7 0.8px, transparent 0.8px),
+    radial-gradient(#444cf7 0.8px, #e5e5f7 0.8px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+.input-btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.input-btn-wrapper input {
+  font-size: 1.8rem;
+  padding: 1rem;
+  width: 90%;
+  border-radius: 0.8rem;
+  border: 1px solid var(--input-border-color);
+}
+
+.input-btn-wrapper input:focus {
+  outline: none;
+}
+
+.input-btn-wrapper .btn {
+  padding: 1rem;
+  font-size: 1.8rem;
+  background-color: transparent;
+  border: 1px solid black;
+  width: 15%;
+  border-radius: 0.8rem;
+  background-color: var(--btn-color);
+  color: white;
+}
+
+.list-container {
+  margin-top: 3.5rem;
+}
+
+.list-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-container ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.8rem;
+}
+
+.dlt-btn a {
+  text-decoration: none;
+  color: var(--btn-color);
+  font-size: 2rem;
+}
+
+.dlt-btn a:hover {
+  color: var(--red);
+}
+
+.checkbox-label-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.checkbox-label-wrapper label {
+  padding-left: 1rem;
+  padding-right: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.6rem;
+}
+
+.checkbox-label-wrapper input[type="checkbox"] {
+  transform: scale(1.6);
+}
+
+input[type="checkbox"]:checked + .lbl {
+  text-decoration: line-through;
+}
